@@ -1,0 +1,11 @@
+book_filename: "hcc_notes"
+language:
+  ui:
+    chapter_name: "Chapter "
+rmd_files: [
+  'index.Rmd',
+  '00_becker2006string.Rmd',
+  '01_CFT4hep-ph.Rmd',
+  ]
+delete_merged_file: true 
+output_dir: "docs"

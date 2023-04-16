@@ -1,0 +1,20 @@
+--- 
+title: "HCC's Clipnotes"
+author: "HCC"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+#github-repo: openscapes/series
+github-repo: chang-hc/clipnotes
+description: "QFT, SString, and all that"
+---
+
+# Current Reading List  {-} 
+
+1. [@becker2006string] [\@ref(BBS)]
+1. [@gillioz2022conformal] [\@ref(CFT4hepph)]
+
+----

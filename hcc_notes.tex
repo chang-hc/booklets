@@ -1,0 +1,416 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\title{Reading Notes}
+\author{HCC}
+\date{2023-04-16}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Reading Notes},
+  pdfauthor={HCC},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{current-reading-list}{%
+\chapter*{Current Reading List}\label{current-reading-list}}
+\addcontentsline{toc}{chapter}{Current Reading List}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  (\protect\hyperlink{ref-becker2006string}{Becker, Becker, and Schwarz 2006})
+\item
+  (\protect\hyperlink{ref-gillioz2022conformal}{Gillioz 2022})
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{longtable}[]{@{}l@{}}
+\toprule
+\endhead
+output: pandoc\_args: {[}``--number-offset=0''{]} \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{becker-becker-schwarz}{%
+\chapter*{Becker-Becker-Schwarz}\label{becker-becker-schwarz}}
+\addcontentsline{toc}{chapter}{Becker-Becker-Schwarz}
+
+Reading Ch1 of (\protect\hyperlink{ref-becker2006string}{Becker, Becker, and Schwarz 2006})
+
+\hypertarget{why}{%
+\section{Why?}\label{why}}
+
+One important feature is the ability to generate GR via its dynamics.
+
+\begin{itemize}
+\tightlist
+\item
+  ``QFT \(\rightarrow\) ST'' \(\Rightarrow\) ``World-lines\footnote{Maybe we need to familar ourselves with the word-line description first:
+    \href{https://arxiv.org/abs/hep-ph/9205205}{Strassler, 1992, Field Theory Without Feynman Diagrams: One-Loop Effective Actions}; \href{https://arxiv.org/abs/1912.10004}{Schubert, 2019, Quantum mechanical path integrals in the first quantised approach to quantum field theory}; \href{https://arxiv.org/abs/hep-th/0101036}{Schubert, Perturbative Quantum Field Theory in the String-Inspired Formalism}; \href{https://physics.stackexchange.com/questions/522717/worldline-formulation-of-qft}{stackexchange: Worldline formulation of QFT}} \(\rightarrow\) World-sheet''
+
+  \begin{itemize}
+  \tightlist
+  \item
+    QFT interaction: local singularties on the junctions of different lines ending-afar
+  \item
+    ST interation: topology on the whole sheet
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Hence,the UV divergence ``must''(if it can be done consistently at all) be resolved in the string picture because above the string scale the smooth nature of the string dynamics resolves the sigularity.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{two-formulations}{%
+\section{Two formulations}\label{two-formulations}}
+
+\hypertarget{nambu-go-action}{%
+\subsection{Nambu-Go Action:}\label{nambu-go-action}}
+
+\[
+S_{p} = -T_{p}V
+\]
+\#\#\# String Sigma Model:
+\[
+S_{\sigma} = - \frac{T}{2} \int \sqrt{-h} h^{\alpha\beta}\eta_{\mu\nu}
+\partial_{\alpha}X^{\mu}
+\partial_{\beta}X^{\nu},
+\]
+
+where
+- \(h^{\alpha\beta}(\sigma, \tau)\) the auxiliary\footnote{the auxiliary here is very apopos: we will gauge its nature later.} world-sheet metric,
+- \(h=\text{det} \,\, h_{\alpha\beta}\),
+- \(h^{\alpha\beta}\) is the inverse of \(h_{\alpha\beta}\), as \(h^{\alpha\beta} = [h^{-1}]^{\alpha\beta}\),
+- \(X^{\mu}(\sigma, \tau)\), the embedding of the world-sheet into the ambient space-time, aka
+- \((\sigma, \tau) \in \mathcal{M}^2 \rightarrow X^{\mu} \in \mathcal{R}^\mathcal{D}\)
+
+\hypertarget{the-equvalence-of-the-two}{%
+\section{The equvalence of the two}\label{the-equvalence-of-the-two}}
+
+Classically, we can use \(S_\sigma\) to find the EOM of \(h_{\alpha\beta}\), and it can be shown that \(S_\sigma\) localized at those \(h\)-locale will reccover the the Nambu-Goto on \(X^\mu\)
+
+However, quantum mechanically, we have the \(\hbar\) to deal with, as well as the gauge-fixing and what not =\textgreater{} (Spoiler alert!!) All in all, we will find that there is a conformal anomaly unless \(mathcal{D}=26\) for bosonic strings, and \(\mathcal{D}=10\) for superstrings
+
+\hypertarget{first-superstring-revolution-1984}{%
+\subsection{First Superstring revolution, 1984}\label{first-superstring-revolution-1984}}
+
+The discovery: Q-consistency of \(\mathcal{N}=1\) 10-dim SST requires a local Yang-Mills gauge symmetry on either \(SO(32)\) or \(E_8\times E_8\) (cancelation of q-anomalies, see Ch5, also with \(U(1)^{496}\) and \(E_8 \times U(1)^{248}\))
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mathcal{N}=2\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    type II: we have both left- and right-moving modes, and we get to choose the handedness on each, either the opposite (IIA) or the same (IIB);
+  \end{itemize}
+\item
+  \(\mathcal{N}=1\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    type I: for IIB above, we have the left-right symmetry, and we get to mode this symmetery out (orbifold projection), wit the remaining content being type I;
+  \item
+    2 ``Heterotic''s: left being left-moving \(\mathcal(D)=26\) bosonic strings, right being right-moving \(\mathcal(D)=11\) superstrings! The 16 extra dimension on the left must be some tori to have a final consistent (q-anomaly-free) formulation: Two such tori, each corrresponds to \(SO(32)\) or \(E_8\times E_8\).
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{second-superstring-revolutionlate-1980s-to-1990s}{%
+\subsection{Second Superstring revolution,late 1980s to 1990s}\label{second-superstring-revolutionlate-1980s-to-1990s}}
+
+Too many ultimate theories now\ldots however, T-duality is found to related the twp type-Is and type-IIs! With the nonperturbative S-duality and the opening up of another dimension at strong coupling, we have the final united theory!
+
+T-duality: two different geometries in the extra dimension are physically q-equivalent!
+- Example: circle with radius \(R\) is the same as circle with radius \(\frac{l^2_s}{R}\)
+
+S-duality: \(g_s \leftrightarrow \frac{1}{g_s}\)
+
+\begin{itemize}
+\tightlist
+\item
+  type-IIB with itself
+\item
+  type-IA with \(\text{Heterotic}|_{SO(32)}\)
+\item
+  How about type-IIA and \(\text{Heterotic}|_{E_8 \times E_8}\)?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    they grow an extra dimension of the size of \(g_s l_s\)!
+
+    \begin{itemize}
+    \tightlist
+    \item
+      A circle for type-IIA;
+    \item
+      A line interval for \(\text{Heterotic}|_{E_8 \times E_8}\) )
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+Matrix theory
+
+\begin{itemize}
+\tightlist
+\item
+  A dual description of M-theory in flat 11-dimensional space-time
+\item
+  QM of N\(\times\)N matrices in the large N limit
+\end{itemize}
+
+F-theory
+
+\begin{itemize}
+\tightlist
+\item
+  We have S-duality opening up type-IIA and \(\text{Heterotic}|_{E_8 \times E_8}\) to M-theory \ldots{} how about others?
+\item
+  type-IIB has a non-perturbative \(SL(2,\mathbb{Z})\)-symmetry -- which is naturally associated with a fictitious torus (the modular group of a torus) + type-IIB also has a complex scalar field \(\tau\) transforming under \(SL(2,\mathbb{Z})\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We can see this symmetry geometrically, having an auxiliary two-torus \(T^2\) with complex structure \(\tau\).
+  \end{itemize}
+\end{itemize}
+
+\begin{longtable}[]{@{}l@{}}
+\toprule
+\endhead
+output: pandoc\_args: {[}``--number-offset=0''{]} \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{gillioz-cft-v00.00}{%
+\chapter*{Gillioz CFT v00.00}\label{gillioz-cft-v00.00}}
+\addcontentsline{toc}{chapter}{Gillioz CFT v00.00}
+
+Reading (\protect\hyperlink{ref-gillioz2022conformal}{Gillioz 2022})
+
+\hypertarget{preface}{%
+\section*{Preface}\label{preface}}
+\addcontentsline{toc}{section}{Preface}
+
+\begin{itemize}
+\tightlist
+\item
+  Two more symmetries: scale symmetry, and special conformal symmetry
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Modern conformal bootstrap!
+  \item
+    Unitarity bounds derived from the spectral representation!
+  \item
+    Appearance of UV and IR divergences!
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{ch1-intro}{%
+\section{Ch1: Intro}\label{ch1-intro}}
+
+\begin{itemize}
+\tightlist
+\item
+  New Definition:
+  \begin{align}
+  \mathrm{CFT}  =& \mathrm{RQFT}  \\
+        &+ \mathrm{Scale Sym}\\
+       &+ \mathrm{Special-Conformal Sym}
+  \end{align}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    RQFT: flat-Minkowski, Wightman axioms, and all that.
+  \item
+    Scale Sym: RG, no-mass gap, and all that
+  \item
+    Special-Conformal Sym: conformal correlation functions, OPE(!), conformal bootstrap(!!)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{ch2-classical-cft}{%
+\section{Ch2: C(lassical)-CFT}\label{ch2-classical-cft}}
+
+\begin{itemize}
+\tightlist
+\item
+  The physical symmetry is a special transformation enjoyed by a physical system, and in the most general term it can be set up tentatively (without putting requirement at all) as:
+  \[
+  x^\mu \rightarrow x'^\mu = x^\mu + \varepsilon^\mu(x) + \mathcal{O}(\varepsilon^2)
+  \]
+\item
+  The Physical distance, aka \(ds = g_{\mu\nu}(x) dx^\mu dx^\nu\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Either Eucliean \(\delta_{\mu\nu}\) or Minskowski \(\eta_{\mu\nu}\)
+  \item
+    Distance being physical, aka invariant under valid physically sensible transformation:
+    \[
+    g'_{\mu\nu}(x') dx'^\mu dx'^\nu = g_{\alpha\beta}(x) dx^\alpha dx^\beta
+    \]
+  \item
+    Assuming the metric is flat, aka \(\partial_{\alpha} g_{\mu\nu} \equiv 0\), then
+  \end{itemize}
+\end{itemize}
+
+\begin{align}
+  g'_{\mu\nu}(x')  =&  
+  g_{\alpha\beta}
+  \frac{\partial x^\alpha}{\partial x'^\mu}
+  \frac{\partial x^\beta}{\partial x'^\nu} \\
+  =& g_{\alpha\beta} 
+  (\delta^\alpha_\mu - \partial_\mu \varepsilon^\alpha)
+  (\delta^\beta_\nu - \partial_\nu \varepsilon^\beta) 
+  + \mathcal{O}(\varepsilon^2) \\
+  =&  g_{\mu\nu} - \partial_\mu \varepsilon_\nu - \partial_\nu \varepsilon_\mu 
+  + \mathcal{O}(\varepsilon^2) 
+\end{align}
+
+\begin{itemize}
+\tightlist
+\item
+  Therefore, in a flat metric, for the distance to be preserved, the would-be good physical symmetry cannot be arbitrary in that it needs to obey the constrain of \(\partial_\mu \varepsilon_\nu + \partial_\nu \varepsilon_\mu \overset{!}{=} 0\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The most general solution: \(\varepsilon_\mu = a^\mu + \omega_{\mu\nu}(x) x^\nu\), with \(a^\mu\) be a constant, and \(\omega_{\mu\nu}\) be anti-symmetric tensor.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \([a^\mu|x^\mu\rightarrow{x^\mu+a^\mu}]\), the translation group!
+    \item
+      \([\omega_{\mu\nu}|x^\mu\rightarrow{x^\mu+\omega_{\mu\nu}x^\nu}]\): the rotation group!
+
+      \begin{itemize}
+      \tightlist
+      \item
+        \([a^\mu,\omega_{\mu\nu}]\), the Poincare group!
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{reference}{%
+\section{Reference}\label{reference}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-becker2006string}{}}%
+Becker, Katrin, Melanie Becker, and John H Schwarz. 2006. \emph{String Theory and m-Theory: A Modern Introduction}. Cambridge university press.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gillioz2022conformal}{}}%
+Gillioz, Marc. 2022. {``Conformal Field Theory for Particle Physicists.''} \emph{arXiv Preprint arXiv:2207.09474}.
+
+\end{CSLReferences}
+
+\end{document}
